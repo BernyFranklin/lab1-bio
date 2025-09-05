@@ -1,11 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name – Portfolio</title>
+  <meta name="description" content="Personal bio and portfolio for Your Name." />
+  <!-- Add a <link rel="stylesheet" href="styles.css"> later during Lab 1 -->
 </head>
 <body>
-    <h1>Stuff</h1>
+  <!-- Visible focusable skip link (style later) -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Your Name</h1>
+    <p class="tagline">Short tagline or role — e.g., Student Developer & Designer</p>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="about">
+      <h2>About</h2>
+
+      <figure>
+        <!-- Replace with your own image file and alt text -->
+        <img src="profile-placeholder.jpg" alt="Portrait of Your Name" width="240" height="240" />
+        <figcaption>Your Name</figcaption>
+      </figure>
+
+      <p>
+        <!-- TODO: Write 2–3 sentences about yourself -->
+        I’m a [year/major or role] who enjoys building web apps and learning modern tooling.
+        Currently interested in accessibility, performance, and clean UI.
+      </p>
+
+      <ul>
+        <li><strong>Location:</strong> Your City</li>
+        <li><strong>School/Company:</strong> Your School or Workplace</li>
+        <li><strong>Interests:</strong> Topic A, Topic B, Topic C</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <!-- Duplicate or remove articles as needed -->
+      <article>
+        <h3>Project One</h3>
+        <p>
+          <!-- Brief description -->
+          A short description of what this project does and what you learned.
+        </p>
+        <p>
+          <!-- Replace # with a real URL when available -->
+          <a href="#" target="_blank" rel="noopener">View project</a>
+        </p>
+      </article>
+
+      <article>
+        <h3>Project Two</h3>
+        <p>
+          Another project summary. Mention your role, tools, and outcome in one–two sentences.
+        </p>
+        <p>
+          <a href="#" target="_blank" rel="noopener">View project</a>
+        </p>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <!-- Keep these simple for Lab 1; you’ll style them later -->
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <!-- Add more: Git, Python, Java, etc. -->
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <!-- You’ll add a real form and validation in a later lab; for now, simple links/info -->
+      <address>
+        <!-- Replace with your email -->
+        <p>Email: <a href="mailto:your.name@example.com">your.name@example.com</a></p>
+        <p>Location: Your City, Country</p>
+      </address>
+
+      <ul>
+        <!-- Replace # with your profiles or remove items you don’t use -->
+        <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Personal Blog</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
 </body>
 </html>
