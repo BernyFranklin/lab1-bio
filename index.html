@@ -1,111 +1,170 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name – Portfolio</title>
-  <meta name="description" content="Personal bio and portfolio for Your Name." />
-  <!-- Add a <link rel="stylesheet" href="styles.css"> later during Lab 1 -->
-</head>
-<body>
-  <!-- Visible focusable skip link (style later) -->
-  <a href="#main" class="skip-link">Skip to main content</a>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Your Name – Portfolio</title>
+      <meta
+         name="description"
+         content="Personal bio and portfolio for Your Name."
+      />
+      <!-- Bootstrap Style Sheet -->
+      <!-- <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+         crossorigin="anonymous"
+      /> -->
+      <!-- My Style Sheet -->
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <!-- Visible focusable skip link (style later) -->
+      <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header>
-    <h1>Your Name</h1>
-    <p class="tagline">Short tagline or role — e.g., Student Developer & Designer</p>
+      <header class="box">
+         <h1>Frank Bernal</h1>
+         <p class="tagline">Undergraduate Student of Computer Science</p>
 
-    <nav aria-label="Primary">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+         <nav aria-label="Primary">
+            <ul id="nav">
+               <li><a href="#about">About</a></li>
+               <li><a href="#projects">Projects</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>
+      </header>
 
-  <main id="main">
-    <section id="about">
-      <h2>About</h2>
+      <main id="main">
+         <section id="about" class="box">
+            <h2>About</h2>
 
-      <figure>
-        <!-- Replace with your own image file and alt text -->
-        <img src="profile-placeholder.jpg" alt="Portrait of Your Name" width="240" height="240" />
-        <figcaption>Your Name</figcaption>
-      </figure>
+            <figure>
+               <!-- Replace with your own image file and alt text -->
+               <img
+                  src="assets/IMG_4137.jpg"
+                  alt="Portrait of Frank Bernal"
+                  width="240"
+               />
+               <figcaption>Frank Bernal</figcaption>
+            </figure>
 
-      <p>
-        <!-- TODO: Write 2–3 sentences about yourself -->
-        I’m a [year/major or role] who enjoys building web apps and learning modern tooling.
-        Currently interested in accessibility, performance, and clean UI.
-      </p>
+            <p>
+               <!-- Write 2–3 sentences about yourself -->
+               I am a senior studying Computer Science who enjoys creating
+               simulations and building webpages. Currently the President and
+               Captain of the Fresno State Hockey Club.
+            </p>
 
-      <ul>
-        <li><strong>Location:</strong> Your City</li>
-        <li><strong>School/Company:</strong> Your School or Workplace</li>
-        <li><strong>Interests:</strong> Topic A, Topic B, Topic C</li>
-      </ul>
-    </section>
+            <ul>
+               <li><strong>Location:</strong> Fresno</li>
+               <li><strong>School/Company:</strong> Fresno State University</li>
+               <li>
+                  <strong>Interests:</strong> Computer Science, Hockey, Star
+                  Wars
+               </li>
+            </ul>
+         </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+         <section id="projects" class="box">
+            <h2>Projects</h2>
 
-      <!-- Duplicate or remove articles as needed -->
-      <article>
-        <h3>Project One</h3>
-        <p>
-          <!-- Brief description -->
-          A short description of what this project does and what you learned.
-        </p>
-        <p>
-          <!-- Replace # with a real URL when available -->
-          <a href="#" target="_blank" rel="noopener">View project</a>
-        </p>
-      </article>
+            <!-- Duplicate or remove articles as needed -->
+            <article>
+               <h3>SIR Model Infection Simulation</h3>
+               <p>
+                  <!-- Brief description -->
+                  This project used the Susceptible, Infected, Recovery (SIR)
+                  model to simulate infection spread in a population. The
+                  project was written in Python and included user entered
+                  parameters for Population Size, Intitial Infected, Infection
+                  Rate, Recovery Time, and Movement Speed. The agents were color
+                  coded dots: Blue (Susceptible), Red (Infected), and Green
+                  (Recovered).
+               </p>
+               <p>
+                  <!-- Replace # with a real URL when available -->
+                  <a
+                     href="https://github.com/BernyFranklin/P1_6-Infection"
+                     target="_blank"
+                     rel="noopener"
+                     >View project on GitHub</a
+                  >
+               </p>
+            </article>
 
-      <article>
-        <h3>Project Two</h3>
-        <p>
-          Another project summary. Mention your role, tools, and outcome in one–two sentences.
-        </p>
-        <p>
-          <a href="#" target="_blank" rel="noopener">View project</a>
-        </p>
-      </article>
-    </section>
+            <article>
+               <h3>Email Generator</h3>
+               <p>
+                  This project involved making a tool to generate common emails
+                  the Veterans Resource Center sends out to new students seeking
+                  to use their Veteran Affairs Education Benefits. I was the
+                  sole contributor and created it to make my office work easier
+                  and more efficient.
+               </p>
+               <p>
+                  <a
+                     href="https://bernyfranklin.github.io/vrcEmailGen/index.html"
+                     target="_blank"
+                     rel="noopener"
+                     >View project</a
+                  >
+               </p>
+            </article>
+         </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <!-- Keep these simple for Lab 1; you’ll style them later -->
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <!-- Add more: Git, Python, Java, etc. -->
-      </ul>
-    </section>
+         <section id="skills" class="box">
+            <h2>Skills</h2>
+            <!-- Keep these simple for Lab 1; you’ll style them later -->
+            <ul>
+               <li>HTML</li>
+               <li>CSS</li>
+               <li>JavaScript</li>
+               <li>Python</li>
+               <li>C++</li>
+               <li>Git</li>
+               <!-- Add more: Git, Python, Java, etc. -->
+            </ul>
+         </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <!-- You’ll add a real form and validation in a later lab; for now, simple links/info -->
-      <address>
-        <!-- Replace with your email -->
-        <p>Email: <a href="mailto:your.name@example.com">your.name@example.com</a></p>
-        <p>Location: Your City, Country</p>
-      </address>
+         <section id="contact" class="box">
+            <h2>Contact</h2>
+            <!-- You’ll add a real form and validation in a later lab; for now, simple links/info -->
+            <address>
+               <!-- Replace with your email -->
+               <p>
+                  Email:
+                  <a href="mailto:frankbernal@mail.fresnostate.edu"
+                     >frankbernal@mail.fresnostate.edu</a
+                  >
+               </p>
+               <p>Location: Fresno, Ca, USA</p>
+            </address>
 
-      <ul>
-        <!-- Replace # with your profiles or remove items you don’t use -->
-        <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="#" target="_blank" rel="noopener">Personal Blog</a></li>
-      </ul>
-    </section>
-  </main>
+            <ul>
+               <!-- Replace # with your profiles or remove items you don’t use -->
+               <li>
+                  <a
+                     href="https://github.com/BernyFranklin"
+                     target="_blank"
+                     rel="noopener"
+                     ><img class="icon" src="assets/gitHub.svg" />GitHub</a
+                  >
+               </li>
+               <li>
+                  <a
+                     href="https://www.linkedin.com/in/bernyfranklin/"
+                     target="_blank"
+                     ><img class="icon" src="assets/linkedIn.svg" />LinkedIn</a
+                  >
+               </li>
+            </ul>
+         </section>
+      </main>
 
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
-</body>
+      <footer class="box">
+         <p>&copy; 2025 Frank Bernal</p>
+      </footer>
+   </body>
 </html>
