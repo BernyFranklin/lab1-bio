@@ -1,5 +1,11 @@
 let projects = [
    {
+      title: "EyeDHD (Ongoing)",
+      description:
+         "This is the eye tracking tool to be used for the Psych Department in diagnosing ADHD with objective data.",
+      link: "#",
+   },
+   {
       title: "SIR Model Infection Simulation",
       description:
          "This project used the Susceptible, Infected, Recovery (SIR) model to simulate infection spread in a population. The project was written in Python and included user entered parameters for Population Size, Intitial Infected, Infection Rate, Recovery Time, and Movement Speed. The agents were color coded dots: Blue (Susceptible), Red (Infected), and Green (Recovered).",
