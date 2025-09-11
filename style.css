@@ -1,7 +1,23 @@
-body {
-   background: linear-gradient(135deg, #0d1b2a, #a4161a, #ffb703);
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
 }
+
+body {
+   --angle: 0deg;
+   background: linear-gradient(var(--angle), #0d1b2a, #a4161a, #ffb703);
+   background-attachment: fixed;
+   animation: rotateGrad 24s linear infinite;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   width: 80%;
+   margin: 5px auto 0px auto;
+}
+
+@keyframes rotateGrad {
+  to { --angle: 360deg; }
+}
+
 h1,
 h2,
 h3 {
@@ -12,15 +28,14 @@ main {
    display: flex;
    flex-wrap: wrap;
    align-items: stretch;
-   gap: 30px;
-   padding-inline: 10px;
+   gap: 5px;
+   /*padding-inline: 10px;*/
    color: #495057;
 }
 
 .box {
    background-color: #f8f9fa;
    border-radius: 20px;
-   margin: 10px;
    padding: 10px 20px;
    border-color: #1b263b;
    border-style: solid;
@@ -28,8 +43,7 @@ main {
 }
 
 main > section.box {
-   flex: 0 0 calc(50% - 20px);
-   margin: 0;
+   flex: 0 0 calc(50% - 5px);
    box-sizing: border-box;
 }
 
@@ -42,7 +56,7 @@ img {
 .icon {
    border-style: none;
    width: 20px;
-   margin: 0px 5px 0px 0px;
+   margin: 0px 0px -5px 0px;
 }
 
 #nav {
@@ -63,11 +77,8 @@ a:active {
    color: #0d1b2a;
 }
 
-@media (max-width: 800px) {
-   .box {
-      width: 90%;
-   }
-   main > section.box {
-      flex-basis: 100%;
+@media (max-width: 1024px) {
+   main {
+      display: block;
    }
 }
