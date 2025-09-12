@@ -73,6 +73,10 @@ img {
    justify-content: space-around;
 }
 
+#project-list {
+   visibility: hidden;
+}
+
 a {
    color: #a4161a;
 }
