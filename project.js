@@ -20,6 +20,13 @@ let projects = [
       link: "https://bernyfranklin.github.io/vrcEmailGen/index.html",
       type: "personal",
    },
+   {
+      title: "Outdoor Park Concert App",
+      description:
+         "This Python project involved creating a ticketing app via the command line that enabled the user to view available seating, purchase tickets, query by name, display all purchases, and enforced social distancing parameters when purchasing tickets.",
+      link: "https://youtu.be/fkoU1B-YR5Q",
+      type: "school",
+   },
 ];
 
 function listProjects(projects, sectionId) {
@@ -54,6 +61,7 @@ function toggleProjectList() {
    const personalChecked = document.getElementById("filter-personal").checked;
    const projectList = document.getElementById("project-list");
    projectList.style.visibility = "visible";
+
    const filteredProjects = projects.filter((project) => {
       if (project.type === "school" && schoolChecked) return true;
       if (project.type === "personal" && personalChecked) return true;
@@ -65,7 +73,3 @@ function toggleProjectList() {
 document
    .getElementById("show-projects")
    .addEventListener("click", () => toggleProjectList());
-
-
-
-//listProjects(projects, "project-list");

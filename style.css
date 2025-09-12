@@ -50,6 +50,10 @@ main > section {
    box-sizing: border-box;
 }
 
+footer {
+   text-align: center;
+}
+
 img {
    border-radius: 50%;
    border-style: solid;
@@ -78,8 +82,6 @@ img {
 .project-list {
    visibility: hidden;
 }
-
-
 
 #nav {
    display: flex;
