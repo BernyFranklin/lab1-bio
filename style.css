@@ -32,7 +32,6 @@ main {
    flex-wrap: wrap;
    align-items: stretch;
    gap: 5px;
-   /*padding-inline: 10px;*/
    color: #495057;
 }
 
