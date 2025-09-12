@@ -4,6 +4,18 @@
    initial-value: 0deg;
 }
 
+@keyframes rotateGrad {
+   to {
+      --angle: 360deg;
+   }
+}
+
+@media (max-width: 1024px) {
+   main {
+      display: block;
+   }
+}
+
 body {
    --angle: 0deg;
    background: linear-gradient(var(--angle), #0d1b2a, #a4161a, #ffb703);
@@ -12,12 +24,6 @@ body {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    width: 80%;
    margin: 5px auto 5px auto;
-}
-
-@keyframes rotateGrad {
-   to {
-      --angle: 360deg;
-   }
 }
 
 h1,
@@ -39,6 +45,17 @@ section {
    padding: 10px;
 }
 
+main > section {
+   flex: 0 0 calc(50% - 2.5px);
+   box-sizing: border-box;
+}
+
+img {
+   border-radius: 50%;
+   border-style: solid;
+   border-color: #002a6d;
+}
+
 .box {
    background-color: #f8f9fa;
    border-radius: 20px;
@@ -50,16 +67,7 @@ section {
    margin-bottom: 0px;
 }
 
-main > section {
-   flex: 0 0 calc(50% - 2.5px);
-   box-sizing: border-box;
-}
 
-img {
-   border-radius: 10px;
-   border-style: solid;
-   border-color: #002a6d;
-}
 
 .icon {
    border-style: none;
@@ -89,8 +97,3 @@ a:active {
    color: #0d1b2a;
 }
 
-@media (max-width: 1024px) {
-   main {
-      display: block;
-   }
-}
