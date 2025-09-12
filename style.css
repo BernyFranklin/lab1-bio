@@ -10,11 +10,6 @@
    }
 }
 
-@media (max-width: 1024px) {
-   main {
-      display: block;
-   }
-}
 
 body {
    --angle: 0deg;
@@ -46,7 +41,7 @@ section {
 }
 
 main > section {
-   flex: 0 0 calc(50% - 2.5px);
+   flex: 0 0 calc(50% - 5px);
    box-sizing: border-box;
 }
 
@@ -105,3 +100,8 @@ a:active {
    color: #0d1b2a;
 }
 
+@media (max-width: 1024px) {
+   main {
+      display: block;
+   }
+}
