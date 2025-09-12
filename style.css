@@ -50,11 +50,6 @@ section {
    margin-bottom: 0px;
 }
 
-a.list-text {
-   display: inline-block;
-   width:75px;
-} 
-
 main > section {
    flex: 0 0 calc(50% - 2.5px);
    box-sizing: border-box;
