@@ -75,6 +75,12 @@ img {
    margin: 0px 0px -5px 0px;
 }
 
+.project-list {
+   visibility: hidden;
+}
+
+
+
 #nav {
    display: flex;
    flex-direction: row;

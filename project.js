@@ -28,6 +28,7 @@ function listProjects(projects, sectionId) {
 
    projects.forEach((project) => {
       const card = document.createElement("article");
+      card.className = project.type;
       // Title
       const title = document.createElement("h3");
       title.textContent = project.title;
@@ -49,15 +50,22 @@ function listProjects(projects, sectionId) {
 }
 
 function toggleProjectList() {
+   const schoolChecked = document.getElementById("filter-school").checked;
+   const personalChecked = document.getElementById("filter-personal").checked;
    const projectList = document.getElementById("project-list");
-   if (projectList.style.visibility === "hidden") {
-      projectList.style.visibility = "visible";
-   } else {
-      projectList.style.visibility = "hidden";
-   }
+   projectList.style.visibility = "visible";
+   const filteredProjects = projects.filter((project) => {
+      if (project.type === "school" && schoolChecked) return true;
+      if (project.type === "personal" && personalChecked) return true;
+      return false;
+   });
+   listProjects(filteredProjects, "project-list");
 }
+
 document
    .getElementById("show-projects")
    .addEventListener("click", () => toggleProjectList());
 
-listProjects(projects, "project-list");
+
+
+//listProjects(projects, "project-list");
