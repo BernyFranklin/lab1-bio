@@ -77,6 +77,26 @@ img {
    visibility: hidden;
 }
 
+.checks:not(:checked) {
+   appearance: none;
+   width: 10px;
+   height: 10px;
+   outline: 1px solid #1b263b;
+   background-color: #f8f9fa;
+   border-radius: 2px;
+   vertical-align: middle;
+}
+
+.checks:checked {
+   appearance: none;
+   width: 10px;
+   height: 10px;
+   outline: 1px solid #1b263b;
+   background-color: #a4161a;
+   border-radius: 2px;
+   vertical-align: middle;
+}
+
 #nav {
    display: flex;
    flex-direction: row;
