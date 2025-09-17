@@ -29,8 +29,8 @@
          </nav>
       </header>
 
-      <main id="main" class="box">
-         <section id="about">
+      <main id="main">
+         <section id="about" class="box">
             <figure>
                <img
                   src="./assets/IMG_4137.jpg"
@@ -54,7 +54,7 @@
                </li>
             </ul>
          </section>
-         <section id="projects">
+         <section id="projects" class="box">
             <h2 class="big-title">Projects</h2>
             <input type="checkbox" id="filter-school" checked />
             <label for="filter-school">School Projects</label>
@@ -64,7 +64,7 @@
             <div id="project-list"></div>
             <!-- Filled by JavaScript -->
          </section>
-         <section id="skills">
+         <section id="skills" class="box">
             <h2 class="big-title">Skills</h2>
             <!-- Keep these simple for Lab 1; you’ll style them later -->
             <ul>
@@ -95,8 +95,11 @@
                <!-- Add more: Git, Python, Java, etc. -->
             </ul>
          </section>
-         <section id="contact-form">
-            <h2 class="big-title">Contact Me</h2>
+         <section id="contact-form" class="box">
+            <h2 class="big-title">Send Me a Message</h2>
+            <div id="form-group">
+            <span class="left"></span>
+            <span class="middle">
             <form id="form">
                <label for="name" class="text-label">Name:</label>
                <input type="text" id="name" name="name" class="text-input single" required />
@@ -110,8 +113,11 @@
                <button type="submit">Send</button>
                <p id="status"></p>
             </form>
+            </span>
+            <span class="right"></span>
+            </div>
          </section>
-         <section id="contact">
+         <section id="contact" class="box">
             <h2 class="big-title">Contact</h2>
             <ul>
                <li>

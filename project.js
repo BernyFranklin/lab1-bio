@@ -125,12 +125,14 @@ document.addEventListener("DOMContentLoaded", () => {
          
          setTimeout(() => {
             statusEl.textContent = "Message Sent!";
-            form.reset();  // clear the form
-         }, 1000); // simulate sending delay
+            form.reset();  
+            
+            setTimeout(() => {
+               statusEl.textContent = "";
+            }, 2000);// clear the form
+         }, 2000); // simulate sending delay
          
-         setTimeout(() => {
-            statusEl.textContent = ""; // clear the message after a while
-         }, 1000)
+         
       }
    });
 });
