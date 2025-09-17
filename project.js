@@ -70,6 +70,67 @@ function toggleProjectList() {
    listProjects(filteredProjects, "project-list");
 }
 
+function validateEmail(email) {
+   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   return re.test(String(email).toLowerCase());
+}
+
+// used for showing the projects
 document
    .getElementById("show-projects")
    .addEventListener("click", () => toggleProjectList());
+
+// used for the email validation
+document.addEventListener("DOMContentLoaded", () => {
+   const emailInput = 
+      document.getElementById("email") ||
+      document.querySelector('input[name="email"]') ||
+      document.querySelector('input[type="email"]');
+   if (!emailInput) return;
+
+   let errorEl = document.getElementById("email-error");
+   if (!errorEl) {
+      errorEl = document.createElement("div");
+      errorEl.id = "email-error";
+      errorEl.setAttribute("aria-live", "polite");
+      emailInput.insertAdjacentElement("afterend", errorEl);
+   }
+
+   const form = emailInput.closest("form");
+   if (!form) return;
+
+   form.addEventListener("submit", (e) => {
+      e.preventDefault();                       // stops default submission
+
+      // grab our status element or create one if it doesn't exist
+      let statusEl = document.getElementById("status");
+      if (!statusEl) {
+         statusEl = document.createElement("p");
+         statusEl.id = "status";
+         emailInput.insertAdjacentElement("afterend", statusEl);
+      }
+      
+      const value = emailInput.value.trim();
+      if (!validateEmail(value)) {
+         e.preventDefault();
+         errorEl.textContent =
+            value === "" ? "Email is required." : "Please enter a valid email.";
+         emailInput.classList.add("invalid");
+         emailInput.focus();
+         statusEl.textContent = "";    // if invalid, clear sending message
+      } else{
+         errorEl.textContent = "";
+         statusEl.textContent = "Sending...";
+         emailInput.classList.remove("invalid");   
+         
+         setTimeout(() => {
+            statusEl.textContent = "Message Sent!";
+            form.reset();  // clear the form
+         }, 1000); // simulate sending delay
+         
+         setTimeout(() => {
+            statusEl.textContent = ""; // clear the message after a while
+         }, 1000)
+      }
+   });
+});
