@@ -52,7 +52,7 @@ figure {
    margin: 0px;
 }
 
-img {
+.profile-pic{
    border-radius: 20px;
    border-style: solid;
    border-color: #002a6d;
